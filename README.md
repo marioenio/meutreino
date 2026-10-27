@@ -10,7 +10,7 @@ Em **Settings → Pages → Build and deployment**, selecione **Deploy from a br
 
 Semana de 5 dias com superiores/inferiores e circuito leve na quarta; duas alternativas por movimento, mapas musculares esquemáticos, instruções, séries/carga/repetições/RIR, descanso, rascunho retomável, cardio, diário e histórico por alternativa, perfis locais, exportação/importação JSON e shell offline.
 
-O plano é uma sugestão de adaptação, não uma prescrição individual nem um plano validado por um profissional. Fontes gerais e explicação dos limites ficam em Semana. Mapas vetoriais são esquemáticos e não substituem uma demonstração de execução. Não há fotos nem vídeos de execução nesta versão.
+O plano é uma sugestão de adaptação, não uma prescrição individual nem um plano validado por um profissional. Fontes gerais e explicação dos limites ficam em Semana. Mapas vetoriais são esquemáticos e não substituem uma demonstração de execução. A versão 1.1 inclui 17 pares de fotos de execução e uma foto externa do Glute Drive com link oficial. A foto externa exige conexão; os pares locais entram no cache offline. Não há vídeo incorporado.
 
 ## Dados e atualizações
 
