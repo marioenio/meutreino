@@ -32,3 +32,16 @@ Execute `node tests.cjs` e `node --check app.js`. Testes cobrem migração com h
 - https://www.cdc.gov/physical-activity-basics/guidelines/adults.html
 
 A divisão semanal e escolha de exercícios são adaptações deste projeto. Alimentação e adesão também influenciam a perda de gordura; não há promessa de resultado ou queima localizada.
+
+
+## Release 1.2.0
+
+Aquecimento guiado de 6 min (3 min cardio leve, 2 min mobilidade confortável, 1 min ensaio) e preparação específica. Check de conclusão salvo no rascunho. Séries de aquecimento ficam fora das séries de trabalho.
+
+Rotação A/B por dia e perfil: avança somente ao concluir aquela sessão, não pelo calendário. Mantém padrões principais e varia ordem/acessórios. Cada rascunho novo guarda um snapshot do plano para não mudar durante a sessão. O ciclo é simples, não uma prescrição adaptativa ou acompanhamento por IA. O usuário controla a carga; a progressão continua baseada nos registros e RIR.
+
+Objetivos locais: emagrecimento com fortalecimento (cardio sugerido 15 min), ou fortalecimento geral (10 min). Ambos trabalham superiores e inferiores, sem prescrição de carga pelo sexo, peso ou altura. Mesma semana padrão de 5 dias; disponibilidade, experiência e limitações de cada pessoa precisam de confirmação e ajuste com profissional. Dados pessoais são preenchidos no aparelho; não são pré-carregados no código público.
+
+Migração de dados v2 para v3 acrescenta o objetivo ao perfil existente, com padrão emagrecimento + fortalecimento; preserva sessões e rascunhos, e salva cópia antes de migrar. Backups antigos continuam aceitos. Os IDs dos exercícios e alternativas permanecem estáveis.
+
+Fonte do aquecimento: https://www.nhs.uk/live-well/exercise/how-to-warm-up-before-exercising/ (adaptação editorial do app, não reprodução integral).
