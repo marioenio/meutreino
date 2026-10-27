@@ -1,8 +1,8 @@
 'use strict';
 // Change this version whenever any app-shell asset changes. Never clear localStorage here.
-const CACHE='meutreino-shell-v1.1.0';
+const CACHE='meutreino-shell-v1.1.1';
 const ASSETS=['./','./index.html','./style.css','./data.js','./storage.js','./app.js','./media.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./media/Machine_Bench_Press.webp','./media/Dumbbell_Bench_Press.webp','./media/Leverage_Iso_Row.webp','./media/One-Arm_Dumbbell_Row.webp','./media/Machine_Shoulder_Military_Press.webp','./media/Dumbbell_Shoulder_Press.webp','./media/Machine_Bicep_Curl.webp','./media/Dumbbell_Bicep_Curl.webp','./media/Leg_Press.webp','./media/Dumbbell_Squat_To_A_Bench.webp','./media/Butt_Lift_Bridge.webp','./media/Seated_Leg_Curl.webp','./media/Platform_Hamstring_Slides.webp','./media/Seated_Calf_Raise.webp','./media/Standing_Dumbbell_Calf_Raise.webp','./media/Ab_Crunch_Machine.webp','./media/Dead_Bug.webp'];
-self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))));
+self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS.map(path=>new Request(path,{cache:'reload'}))))));
 // No skipWaiting: a new shell activates only after all existing app windows close.
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('meutreino-shell-')&&k!==CACHE).map(k=>caches.delete(k))))));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==self.location.origin||!u.pathname.startsWith(new URL(self.registration.scope).pathname))return;e.respondWith(caches.open(CACHE).then(async c=>{const cached=await c.match(e.request);if(cached)return cached;try{return await fetch(e.request)}catch(err){if(e.request.mode==='navigate')return c.match('./index.html');throw err}}))});
