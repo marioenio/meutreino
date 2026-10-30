@@ -14,7 +14,7 @@ const EXERCISES = {
 const WEEK=[
  {day:'Segunda',title:'Superiores A',tag:'FORÇA + CARDIO',items:['press','row','shoulder','curl','core'],cardio:15,desc:'Peito, costas, ombros e braços. Termine com caminhada ou bicicleta confortável.'},
  {day:'Terça',title:'Inferiores A',tag:'FORÇA + CARDIO',items:['squat','hinge','legcurl','calf','core'],cardio:15,desc:'Pernas e glúteos com controle. Cardio confortável no final.'},
- {day:'Quarta',title:'Circuito leve',tag:'MOVIMENTO + RECUPERAÇÃO',items:['squat','row','press','core'],cardio:0,circuit:true,desc:'Uma série leve por exercício. Após os dois primeiros, caminhe 3–5 min; repita após os dois últimos. Sem corrida nesta fase. Se houver dor muscular ou fadiga, troque por caminhada e mobilidade.'},
+ {day:'Quarta',title:'Circuito leve',tag:'MOVIMENTO + RECUPERAÇÃO',items:['squat','row','press','core'],cardio:0,circuit:true,desc:'Três séries leves por exercício, com descanso e pelo menos 4 repetições em reserva. Após os dois primeiros, caminhe 3–5 min; repita após os dois últimos. Sem corrida nesta fase. Se houver dor muscular ou fadiga, troque por caminhada e mobilidade.'},
  {day:'Quinta',title:'Superiores B',tag:'FORÇA + CARDIO',items:['row','press','shoulder','curl','core'],cardio:15,desc:'Repita os padrões com boa técnica. As alternativas têm históricos independentes.'},
  {day:'Sexta',title:'Inferiores B',tag:'FORÇA + CARDIO',items:['hinge','squat','legcurl','calf','core'],cardio:15,desc:'Consolide a semana. Prefira movimentos controlados a aumentar o peso.'}
 ];

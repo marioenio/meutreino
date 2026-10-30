@@ -17,7 +17,29 @@ const Training=require('./plans.js');const base={title:'Teste',items:['press'],c
 const a=Training.build(base,0,{id:'p',goal:'weightloss'},[]);const b=Training.build(base,0,{id:'p',goal:'weightloss'},s.sessions);assert.equal(a.rotation,0);assert.equal(b.rotation,1);assert.notDeepEqual(a.items,b.items);
 assert.deepEqual(Training.build(base,0,{id:'other',goal:'weightloss'},s.sessions).items,a.items);
 assert.equal(Training.build(base,0,{id:'p',goal:'strength'},[]).cardio,10);
-assert.equal(Training.warmup(0).reduce((n,x)=>n+x.seconds,0),360);
-assert.notDeepEqual(Training.warmup(0),Training.warmup(1));
+assert.equal(Training.warmup(0).reduce((n,x)=>n+x.seconds,0),180);
+assert.deepEqual(Training.warmup(0),Training.warmup(1));
+assert.equal(Training.setCount(a),3);
+assert.equal(Training.setCount({circuit:true}),3);
+const vm=require('node:vm'),fs=require('node:fs');const context={};vm.createContext(context);vm.runInContext(fs.readFileSync('./data.js','utf8')+';globalThis.week=WEEK;',context);
+for(let day=0;day<5;day++)for(let completed=0;completed<2;completed++){
+ const plan=Training.build(context.week[day],day,{id:'p'},Array.from({length:completed},()=>({profileId:'p',day})));
+ assert.equal(plan.workSets,3);
+ for(const id of (day===0||day===3?['press','row','shoulder']:day===1||day===4?['squat','hinge','legcurl']:[]))assert.ok(plan.items.includes(id),`${day}/${completed} missing ${id}`);
+}
 let frozen=structuredClone(a);Training.build(base,0,{id:'p',goal:'strength'},s.sessions);assert.deepEqual(frozen,a);
-console.log('PASS: v1/v2 migration, drafts/history preserved, independent A/B rotations, goal presets, 6-minute warmups, backups and write failure');
+console.log('PASS: v1/v2 migration, drafts/history preserved, independent A/B rotations, goal presets, compact warmups, 3 sets and consistent main movements, backups and write failure');
+
+const Insights=require('./insights.js');
+const workout=(profileId,finishedAt,circuit=false)=>({profileId,finishedAt,circuit,sets:[{exerciseId:'press',variantId:'machine',index:0}]});
+const stats=Insights.weekly([workout('p','2026-10-29T12:00:00'),workout('other','2026-10-29T12:00:00'),workout('p','2026-10-20T12:00:00'),workout('p','2026-10-28T12:00:00',true)],'p',new Date('2026-10-30T12:00:00'));
+assert.equal(stats.sessions,2);assert.equal(stats.sets,1);assert.equal(stats.direct.press,1);
+const mixed=[{exerciseId:'press',variantId:'machine',index:0},{exerciseId:'press',variantId:'machine',index:1},{exerciseId:'press',variantId:'free',index:2}];
+assert.equal(Insights.completedSlots({items:['press']},mixed),0);
+assert.equal(Insights.completedSlots({items:['press']},[...mixed,{exerciseId:'press',variantId:'machine',index:2}]),1);
+const dataContext={};vm.createContext(dataContext);vm.runInContext(fs.readFileSync('./data.js','utf8')+';globalThis.exercises=EXERCISES;',dataContext);
+assert.equal(Insights.search(dataContext.exercises).length,18);
+assert.equal(Insights.search(dataContext.exercises,'quadriceps','machine').length,1);
+assert.equal(Insights.search(dataContext.exercises,'','free','costas').length,1);
+assert.equal(Insights.search(dataContext.exercises,'inexistente').length,0);
+console.log('PASS: profile/week isolation, circuit separation, per-variant completion and exercise search filters');

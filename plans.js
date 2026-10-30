@@ -2,8 +2,8 @@
 // Reuse stable exercise/variant IDs. Rotation changes emphasis, not recorded loads.
 const Training=(()=>{
  const rotations=[
-  [['press','row','shoulder','curl'],['row','press','curl','core']],
-  [['squat','hinge','legcurl','calf'],['hinge','squat','calf','core']],
+  [['press','row','shoulder','curl'],['row','press','shoulder','core']],
+  [['squat','hinge','legcurl','calf'],['hinge','squat','legcurl','core']],
   [['squat','row','press','core'],['hinge','press','row','calf']],
   [['row','press','shoulder','core'],['press','row','shoulder','curl']],
   [['hinge','squat','legcurl','core'],['squat','legcurl','hinge','calf']]
@@ -12,13 +12,13 @@ const Training=(()=>{
  function build(base,day,profile,sessions){
   const done=sessions.filter(s=>s.profileId===profile?.id&&s.day===day).length;
   const rotation=done%2;
-  return {...base,title:base.title.replace(/ [AB]$/,''),items:[...rotations[day][rotation]],rotation,sequence:done+1,goal:profile?.goal||'weightloss',cardio:base.circuit?0:profile?.goal==='strength'?10:15,planVersion:1};
+  return {...base,title:base.title.replace(/ [AB]$/,''),items:[...rotations[day][rotation]],rotation,sequence:done+1,goal:profile?.goal||'weightloss',cardio:base.circuit?0:profile?.goal==='strength'?10:15,workSets:3,planVersion:2};
  }
- function warmup(day){const upper=day===0||day===3;return [
-  {title:'Ative o corpo',seconds:180,text:'Caminhe na esteira ou pedale bem leve por 3 minutos. Comece devagar, sem ficar ofegante.'},
-  {title:upper?'Prepare ombros e braços':'Prepare quadris, joelhos e tornozelos',seconds:120,text:upper?'Por 2 minutos, alterne círculos pequenos e confortáveis com os ombros, dobrar e estender cotovelos e elevar os braços sem peso. Sem forçar a amplitude.':'Por 2 minutos, alterne marcha leve no lugar, elevações de calcanhares com apoio e movimentos suaves de sentar e levantar de um banco firme, sem carga.'},
-  {title:'Ensaie o primeiro movimento',seconds:60,text:'Durante aproximadamente 1 minuto, pratique lentamente o primeiro exercício sem peso ou com resistência mínima. Peça ajuda para ajustar a máquina. Antes da primeira série de trabalho, faça mais 1 série leve de 8–10 repetições e descanse. Repita a preparação quando mudar para outro movimento exigente.'}
+ function warmup(day){return [
+  {title:'Caminhada ou bicicleta leve',seconds:180,text:'3 minutos em ritmo confortável, sem ficar ofegante. Prolongue se ainda não se sentir preparado.'},
+  {title:'Prepare o movimento',seconds:0,text:'Faça 1 série leve de 8–10 repetições antes do primeiro exercício de superiores e do primeiro de inferiores. Use resistência mínima, confira os ajustes e descanse antes das séries de trabalho. Faça mais preparação se precisar.'}
  ];}
- return{build,warmup,goalName};
+ function setCount(plan){return plan.workSets||3;}
+ return{build,warmup,setCount,goalName};
 })();
 if(typeof module!=='undefined')module.exports=Training;

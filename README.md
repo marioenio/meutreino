@@ -45,3 +45,11 @@ Objetivos locais: emagrecimento com fortalecimento (cardio sugerido 15 min), ou 
 Migração de dados v2 para v3 acrescenta o objetivo ao perfil existente, com padrão emagrecimento + fortalecimento; preserva sessões e rascunhos, e salva cópia antes de migrar. Backups antigos continuam aceitos. Os IDs dos exercícios e alternativas permanecem estáveis.
 
 Fonte do aquecimento: https://www.nhs.uk/live-well/exercise/how-to-warm-up-before-exercising/ (adaptação editorial do app, não reprodução integral).
+
+## Release 1.2.1
+
+Três séries de trabalho por exercício, inclusive no circuito (carga leve, RIR ≥4). Aquecimento recolhido: 3 min de caminhada/bicicleta e uma série leve específica; prolongar conforme necessidade. Ombros e flexora permanecem nas duas variações. Nomes em inglês para reconhecer Life Fitness/Hammer Strength, com catálogo e manuais oficiais. Fotos genéricas não são apresentadas como modelos confirmados. Histórico, IDs e banco local mantidos.
+
+## Release 1.3.0 — fluxos inspirados em openGym
+
+Referência: https://github.com/DuarteSantos8/openGym (consultado em 30/10/2026). Implementação própria para manter o app estático e o formato de dados existente; nenhum código, animação licenciada, logotipo ou mídia de openGym foi copiado. Painel compacto, biblioteca das 18 alternativas com busca e filtros, progresso por exercício e distribuição semanal de séries pelo grupo principal. Sem estimativas de fadiga ou recuperação. Consultar `node tests.cjs` e `node ui-tests.cjs`. A revisão visual em aparelho real e a publicação permanecem pendentes.

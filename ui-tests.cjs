@@ -1,0 +1,15 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
+const nodes=new Map(),node=key=>{if(!nodes.has(key))nodes.set(key,{innerHTML:'',value:'',textContent:'',classList:{toggle(){}},querySelector(){return node('input')},querySelectorAll(){return []}});return nodes.get(key)};
+const ctx={document:{querySelector:node,querySelectorAll:()=>[]},location:{hash:'#treino'},navigator:{},console,structuredClone};vm.createContext(ctx);
+for(const f of ['data.js','plans.js','media.js','insights.js'])vm.runInContext(fs.readFileSync(f,'utf8'),ctx);
+let code=fs.readFileSync('app.js','utf8');vm.runInContext(code.slice(0,code.indexOf("$('#profileBtn').onclick")),ctx);
+vm.runInContext("state={profiles:[{id:'p',name:'Teste',goal:'strength'}],activeProfile:'p',sessions:[],drafts:[]};selectedDay=0;renderWorkout();",ctx);
+let html=node('#app').innerHTML;assert.ok(html.includes('<details class="card warmup"><summary>'));assert.ok(!html.includes('warmup" open'));assert.ok(html.includes('Faça 3 séries'));
+vm.runInContext("currentExercise='press';variant='machine';renderExercise();",ctx);
+html=node('#app').innerHTML;assert.equal((html.match(/data-set="/g)||[]).length,3);assert.ok(html.includes('Chest Press / Iso-Lateral Bench Press'));
+vm.runInContext("selectedDay=2;currentExercise='squat';renderExercise();",ctx);assert.equal((node('#app').innerHTML.match(/data-set="/g)||[]).length,3);
+vm.runInContext("renderHome();",ctx);assert.ok(node('#app').innerHTML.includes('Biblioteca'));
+node('#equipmentFilter').value='all';node('#muscleFilter').value='all';node('#exerciseSearch').value='';
+vm.runInContext("globalThis.beforeView=JSON.stringify(state);renderLibrary();if(JSON.stringify(state)!==beforeView)throw Error('Library changed data');",ctx);
+assert.equal(node('#libraryCount').textContent,'18 alternativa(s)');assert.ok(node('#libraryResults').innerHTML.includes('Supino'));
+console.log('PASS: collapsed warmup, 3 rendered sets, manufacturer names, dashboard, 18-item library, read-only browsing');
