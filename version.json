@@ -1,0 +1,10 @@
+{
+  "version": "2.0.1",
+  "upstream": "b6cfe2bbd3f099523ffbf2677438864e9a09a06f",
+  "languages": [
+    "pt-BR",
+    "en"
+  ],
+  "data": "browser-local",
+  "demoSeed": false
+}
