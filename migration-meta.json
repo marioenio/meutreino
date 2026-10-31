@@ -1,0 +1,399 @@
+{
+  "exercises": {
+    "press": {
+      "name": "Empurrar · peito",
+      "main": [
+        "peito"
+      ],
+      "aux": [
+        "ombros",
+        "triceps"
+      ],
+      "muscle": "Peitoral maior",
+      "helpers": "Tríceps e deltoide anterior",
+      "variants": [
+        [
+          "machine",
+          "Supino na máquina",
+          "Ajuste o banco para as alças ficarem na altura do peito. Apoie as costas, empurre sem travar os cotovelos e retorne devagar."
+        ],
+        [
+          "free",
+          "Supino com halteres",
+          "Deite no banco com pés apoiados. Comece com halteres ao lado do peito, punhos alinhados. Empurre para cima e desça com controle. Peça ajuda para posicionar os pesos."
+        ]
+      ]
+    },
+    "row": {
+      "name": "Puxar · costas",
+      "main": [
+        "costas"
+      ],
+      "aux": [
+        "biceps"
+      ],
+      "muscle": "Dorsais e músculos entre as escápulas",
+      "helpers": "Bíceps e deltoide posterior",
+      "variants": [
+        [
+          "machine",
+          "Remada sentada na máquina",
+          "Apoie o tronco e mantenha a coluna confortável. Puxe as alças em direção às costelas, sem elevar os ombros ou balançar o corpo. Retorne devagar."
+        ],
+        [
+          "free",
+          "Remada unilateral com halter",
+          "Apoie uma mão e um joelho no banco. Com coluna estável, puxe o halter em direção ao quadril. Retorne devagar. Faça as mesmas repetições de cada lado."
+        ]
+      ]
+    },
+    "shoulder": {
+      "name": "Empurrar · ombros",
+      "main": [
+        "ombros"
+      ],
+      "aux": [
+        "triceps"
+      ],
+      "muscle": "Deltoides",
+      "helpers": "Tríceps",
+      "variants": [
+        [
+          "machine",
+          "Desenvolvimento na máquina",
+          "Ajuste as alças próximas à altura dos ombros. Apoie as costas e empurre para cima sem arquear a lombar. Use amplitude confortável."
+        ],
+        [
+          "free",
+          "Desenvolvimento com halteres sentado",
+          "Sente em banco com encosto. Com punhos sobre os cotovelos, empurre os halteres para cima e retorne lentamente, sem arquear as costas."
+        ]
+      ]
+    },
+    "curl": {
+      "name": "Flexionar · braços",
+      "main": [
+        "biceps"
+      ],
+      "aux": [],
+      "muscle": "Bíceps braquial",
+      "helpers": "Braquial e braquiorradial",
+      "variants": [
+        [
+          "machine",
+          "Rosca na máquina",
+          "Ajuste o banco e alinhe o cotovelo ao eixo da máquina. Flexione os cotovelos mantendo os braços apoiados; desça sem soltar a carga."
+        ],
+        [
+          "free",
+          "Rosca com halteres",
+          "Em pé, mantenha cotovelos próximos ao tronco e palmas para frente. Flexione sem balançar o corpo e desça lentamente."
+        ]
+      ]
+    },
+    "squat": {
+      "name": "Agachar · pernas",
+      "main": [
+        "quadriceps"
+      ],
+      "aux": [
+        "gluteos"
+      ],
+      "muscle": "Quadríceps",
+      "helpers": "Glúteo máximo",
+      "variants": [
+        [
+          "machine",
+          "Leg press",
+          "Peça ao instrutor para ajustar banco e travas. Mantenha pés totalmente apoiados e joelhos alinhados aos pés. Desça apenas até onde a pelve continue apoiada e empurre sem travar joelhos."
+        ],
+        [
+          "free",
+          "Agachamento até o banco",
+          "Comece sem peso. Afaste os pés numa posição confortável. Leve o quadril ao banco e levante mantendo joelhos na direção dos pés. Progrida para halter junto ao peito só após dominar."
+        ]
+      ]
+    },
+    "hinge": {
+      "name": "Estender · quadril",
+      "main": [
+        "gluteos"
+      ],
+      "aux": [
+        "posteriores"
+      ],
+      "muscle": "Glúteo máximo",
+      "helpers": "Posteriores da coxa",
+      "variants": [
+        [
+          "machine",
+          "Elevação de quadril na máquina",
+          "Peça ajuda para ajustar apoio e cinto. Com pés apoiados, eleve o quadril contra a resistência sem hiperestender a lombar. Desça com controle."
+        ],
+        [
+          "free",
+          "Ponte de glúteos no solo",
+          "Deite de costas, joelhos dobrados e pés no chão. Eleve o quadril contraindo glúteos, mantendo costelas baixas. Desça devagar. Comece sem carga."
+        ]
+      ]
+    },
+    "legcurl": {
+      "name": "Flexionar · pernas",
+      "main": [
+        "posteriores"
+      ],
+      "aux": [],
+      "muscle": "Isquiotibiais (posteriores da coxa)",
+      "helpers": "Panturrilhas auxiliam",
+      "variants": [
+        [
+          "machine",
+          "Mesa / cadeira flexora",
+          "Ajuste o eixo da máquina alinhado aos joelhos e o rolo acima dos calcanhares. Flexione joelhos sem levantar o quadril ou arquear a lombar."
+        ],
+        [
+          "free",
+          "Flexão de joelhos com toalha deslizante",
+          "Em piso apropriado, deite e apoie os calcanhares em toalhas. Eleve um pouco o quadril e deslize os pés para perto, depois afaste lentamente. É uma alternativa mais exigente: reduza amplitude ou use a máquina se não controlar."
+        ]
+      ]
+    },
+    "calf": {
+      "name": "Elevar · panturrilhas",
+      "main": [
+        "panturrilhas"
+      ],
+      "aux": [],
+      "muscle": "Gastrocnêmio e sóleo",
+      "helpers": "Músculos estabilizadores do tornozelo",
+      "variants": [
+        [
+          "machine",
+          "Panturrilha na máquina",
+          "Ajuste os apoios com o instrutor. Eleve os calcanhares e retorne lentamente, sem quicar. Mantenha joelhos confortáveis."
+        ],
+        [
+          "free",
+          "Elevação de panturrilhas em pé",
+          "Segure um apoio estável. Eleve os calcanhares mantendo o peso distribuído e desça devagar. Comece com os dois pés e sem peso."
+        ]
+      ]
+    },
+    "core": {
+      "name": "Estabilizar · abdômen",
+      "main": [
+        "abdomen"
+      ],
+      "aux": [],
+      "muscle": "Músculos abdominais",
+      "helpers": "Estabilizadores do tronco",
+      "variants": [
+        [
+          "machine",
+          "Abdominal na máquina",
+          "Ajuste apoios para o seu tamanho. Aproxime costelas da pelve com movimento curto e controlado, sem puxar com braços ou pescoço."
+        ],
+        [
+          "free",
+          "Dead bug no solo",
+          "Deite, eleve braços e dobre quadris e joelhos. Estenda devagar braço e perna opostos, mantendo lombar estável e respirando. Alterne os lados. Uma repetição por lado."
+        ]
+      ]
+    }
+  },
+  "demos": {
+    "press:machine": {
+      "id": "Machine_Bench_Press",
+      "images": [
+        "Machine_Bench_Press/0.jpg",
+        "Machine_Bench_Press/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Machine_Bench_Press.webp",
+      "note": "Equipamento de referência. O modelo da sua academia pode ter aparência e ajustes diferentes."
+    },
+    "press:free": {
+      "id": "Dumbbell_Bench_Press",
+      "images": [
+        "Dumbbell_Bench_Press/0.jpg",
+        "Dumbbell_Bench_Press/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Dumbbell_Bench_Press.webp",
+      "note": "Demonstração de referência: execute devagar e com uma carga adequada para você."
+    },
+    "row:machine": {
+      "id": "Leverage_Iso_Row",
+      "images": [
+        "Leverage_Iso_Row/0.jpg",
+        "Leverage_Iso_Row/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Leverage_Iso_Row.webp",
+      "note": "Exemplo de remada com anilhas e apoio no peito. A sua máquina pode usar torre de pesos. Ajustes e cargas variam conforme o modelo."
+    },
+    "row:free": {
+      "id": "One-Arm_Dumbbell_Row",
+      "images": [
+        "One-Arm_Dumbbell_Row/0.jpg",
+        "One-Arm_Dumbbell_Row/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/One-Arm_Dumbbell_Row.webp",
+      "note": "Demonstração de referência: execute devagar e com uma carga adequada para você."
+    },
+    "shoulder:machine": {
+      "id": "Machine_Shoulder_Military_Press",
+      "images": [
+        "Machine_Shoulder_Military_Press/0.jpg",
+        "Machine_Shoulder_Military_Press/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Machine_Shoulder_Military_Press.webp",
+      "note": "Equipamento de referência. O modelo da sua academia pode ter aparência e ajustes diferentes."
+    },
+    "shoulder:free": {
+      "id": "Dumbbell_Shoulder_Press",
+      "images": [
+        "Dumbbell_Shoulder_Press/0.jpg",
+        "Dumbbell_Shoulder_Press/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Dumbbell_Shoulder_Press.webp",
+      "note": "Demonstração de referência: execute devagar e com uma carga adequada para você."
+    },
+    "curl:machine": {
+      "id": "Machine_Bicep_Curl",
+      "images": [
+        "Machine_Bicep_Curl/0.jpg",
+        "Machine_Bicep_Curl/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Machine_Bicep_Curl.webp",
+      "note": "Equipamento de referência. O modelo da sua academia pode ter aparência e ajustes diferentes."
+    },
+    "curl:free": {
+      "id": "Dumbbell_Bicep_Curl",
+      "images": [
+        "Dumbbell_Bicep_Curl/0.jpg",
+        "Dumbbell_Bicep_Curl/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Dumbbell_Bicep_Curl.webp",
+      "note": "Demonstração de referência: execute devagar e com uma carga adequada para você."
+    },
+    "squat:machine": {
+      "id": "Leg_Press",
+      "images": [
+        "Leg_Press/0.jpg",
+        "Leg_Press/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Leg_Press.webp",
+      "note": "Equipamento de referência. O modelo da sua academia pode ter aparência e ajustes diferentes."
+    },
+    "squat:free": {
+      "id": "Dumbbell_Squat_To_A_Bench",
+      "images": [
+        "Dumbbell_Squat_To_A_Bench/0.jpg",
+        "Dumbbell_Squat_To_A_Bench/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Dumbbell_Squat_To_A_Bench.webp",
+      "note": "A foto mostra halteres ao lado do corpo. Na sua adaptação inicial, faça sem peso, tocando um banco firme. Não precisa usar os pesos da foto."
+    },
+    "hinge:free": {
+      "id": "Butt_Lift_Bridge",
+      "images": [
+        "Butt_Lift_Bridge/0.jpg",
+        "Butt_Lift_Bridge/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Butt_Lift_Bridge.webp",
+      "note": "Demonstração de referência: execute devagar e com uma carga adequada para você."
+    },
+    "legcurl:machine": {
+      "id": "Seated_Leg_Curl",
+      "images": [
+        "Seated_Leg_Curl/0.jpg",
+        "Seated_Leg_Curl/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Seated_Leg_Curl.webp",
+      "note": "Equipamento de referência. O modelo da sua academia pode ter aparência e ajustes diferentes."
+    },
+    "legcurl:free": {
+      "id": "Platform_Hamstring_Slides",
+      "images": [
+        "Platform_Hamstring_Slides/0.jpg",
+        "Platform_Hamstring_Slides/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Platform_Hamstring_Slides.webp",
+      "note": "Demonstração de referência: execute devagar e com uma carga adequada para você."
+    },
+    "calf:machine": {
+      "id": "Seated_Calf_Raise",
+      "images": [
+        "Seated_Calf_Raise/0.jpg",
+        "Seated_Calf_Raise/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Seated_Calf_Raise.webp",
+      "note": "Exemplo de máquina sentada. Se a academia tiver outro modelo, peça ao instrutor para conferir a posição e não compare cargas entre máquinas."
+    },
+    "calf:free": {
+      "id": "Standing_Dumbbell_Calf_Raise",
+      "images": [
+        "Standing_Dumbbell_Calf_Raise/0.jpg",
+        "Standing_Dumbbell_Calf_Raise/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Standing_Dumbbell_Calf_Raise.webp",
+      "note": "A foto usa halteres e uma base elevada. Comece no chão, sem carga, segurando um apoio estável."
+    },
+    "core:machine": {
+      "id": "Ab_Crunch_Machine",
+      "images": [
+        "Ab_Crunch_Machine/0.jpg",
+        "Ab_Crunch_Machine/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Ab_Crunch_Machine.webp",
+      "note": "Equipamento de referência. O modelo da sua academia pode ter aparência e ajustes diferentes."
+    },
+    "core:free": {
+      "id": "Dead_Bug",
+      "images": [
+        "Dead_Bug/0.jpg",
+        "Dead_Bug/1.jpg"
+      ],
+      "source": "https://github.com/yuhonas/free-exercise-db",
+      "sourceRevision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+      "local": "./media/Dead_Bug.webp",
+      "note": "Demonstração de referência: execute devagar e com uma carga adequada para você."
+    },
+    "hinge:machine": {
+      "local": "https://www.lifefitness.com/Kentico13CoreBase/media/LFMedia/LifeFitnessImages/Equipment/Strength/Plate-Loaded/Glute%20Drive/Strength-PlateLoaded-GluteDrive-8.png",
+      "source": "https://www.lifefitness.com/en-eu/catalog/strength-training/plate-loaded/hammer-strength-plate-loaded-glute-drive",
+      "manufacturer": true,
+      "note": "Foto do equipamento Hammer Strength Glute Drive. Esta imagem identifica a máquina; não é uma sequência de execução. Confira o cinto, os apoios e as travas com o instrutor. O aparelho da sua academia pode ser diferente."
+    }
+  }
+}
