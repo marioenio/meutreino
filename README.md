@@ -1,6 +1,6 @@
 # Meu Treino — fork pessoal de openGym
 
-Base: [openGym 1.4.3](https://github.com/DuarteSantos8/openGym/tree/b6cfe2bbd3f099523ffbf2677438864e9a09a06f). Versão adaptada: 2.0.0.
+Base: [openGym 1.4.3](https://github.com/DuarteSantos8/openGym/tree/b6cfe2bbd3f099523ffbf2677438864e9a09a06f). Versão adaptada: 2.0.1.
 
 Português do Brasil como padrão e inglês opcional. Dados somente no navegador, sem histórico fictício, conta ou servidor. Biblioteca e recursos originais de treinos, animações, mapas e evolução. Não é um serviço comercial.
 

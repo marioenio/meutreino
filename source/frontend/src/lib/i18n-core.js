@@ -168,6 +168,7 @@ export const descFor = ex => {
   if (!ex) return ''
   const own = descs && descs[ex.id]
   if (own) return own
+  if (lang === 'pt-BR' && !ex.custom) return ''
   if (!enDescs) askDetails()
   return (enDescs && enDescs[ex.id]) || ex.desc || ''
 }
