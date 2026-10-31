@@ -49,11 +49,14 @@ p=root/'frontend/src/locales/pt-BR.js';s=p.read_text();s=s.replace('export const
 p=root/'frontend/src/lib/starter.js';s=p.read_text();s="import { getLang } from './i18n-core.js'\n"+s
 s=s.replace('id: uid(), name, emoji, ex:',"id: uid(), name: getLang()==='pt-BR' ? ({'Push Day':'Empurrar','Pull Day':'Puxar','Leg Day':'Pernas','Upper A':'Superiores A','Upper B':'Superiores B','Lower A':'Inferiores A','Lower B':'Inferiores B','Full Body A':'Corpo inteiro A','Full Body B':'Corpo inteiro B','Full Body C':'Corpo inteiro C'})[name]||name : name, emoji, ex:",1);p.write_text(s)
 # Version identity; openGym attribution remains in the interface and NOTICE.
-p=root/'frontend/package.json';pkg=json.loads(p.read_text());pkg['version']='2.0.0';p.write_text(json.dumps(pkg,indent=2)+'\n')
-p=root/'frontend/package-lock.json';lock=json.loads(p.read_text());lock['version']='2.0.0';lock.get('packages',{}).get('',{})['version']='2.0.0';p.write_text(json.dumps(lock,indent=2)+'\n')
+p=root/'frontend/package.json';pkg=json.loads(p.read_text());pkg['version']='2.0.1';p.write_text(json.dumps(pkg,indent=2)+'\n')
+p=root/'frontend/package-lock.json';lock=json.loads(p.read_text());lock['version']='2.0.1';lock.get('packages',{}).get('',{})['version']='2.0.1';p.write_text(json.dumps(lock,indent=2)+'\n')
 p=root/'frontend/index.html';s=p.read_text().replace('<html lang="en">','<html lang="pt-BR">').replace('<title>openGym</title>','<title>Meu Treino · openGym</title>');s=s.replace('<meta charset="UTF-8">','<meta charset="UTF-8">\n<script src="./legacy-migration.js"></script>\n<script src="./migration-ui.js"></script>');p.write_text(s)
 for filename in ['legacy-migration.js','migration-ui.js','migration-meta.json']:
  shutil.copy2(cfg/filename,root/'frontend/public'/filename)
 (root/'frontend/public/.nojekyll').write_text('')
-print('Prepared openGym 2.0.0 fork: pt-BR/en only, local data, no demo seed, optional legacy import')
+print('Prepared openGym 2.0.1 fork: pt-BR/en only, local data, no demo seed, optional legacy import')
 edit('frontend/public/sw.js',"k => k !== CACHE && k !== MEDIA && k !== DEVICE_CACHE", "k => (k.startsWith('opengym-rt-') || k.startsWith('meutreino-shell-')) && k !== CACHE && k !== MEDIA && k !== DEVICE_CACHE")
+
+# Do not show an English summary under a Portuguese exercise with translated steps.
+edit('frontend/src/lib/i18n-core.js', "  if (!enDescs) askDetails()", "  if (lang === 'pt-BR' && !ex.custom) return ''\n  if (!enDescs) askDetails()")

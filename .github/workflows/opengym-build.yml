@@ -61,7 +61,7 @@ jobs:
           git -C _site config user.name 'github-actions[bot]'
           git -C _site config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git -C _site add --all --force
-          git -C _site commit -m 'Build openGym 2.0.0 with pt-BR/en and safe legacy migration'
+          git -C _site commit -m 'Build openGym 2.0.1 with pt-BR/en and safe legacy migration'
           git -C _site remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
           git -C _site push origin HEAD
           echo "Verified branch: opengym-build-${GITHUB_RUN_ID}" >> "$GITHUB_STEP_SUMMARY"

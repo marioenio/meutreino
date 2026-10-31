@@ -4,3 +4,6 @@ const store=fs.readFileSync(root+'/frontend/src/store/useStore.js','utf8');asser
 const i18n=fs.readFileSync(root+'/frontend/src/lib/i18n.js','utf8');assert.ok(!i18n.includes("glob('../locales/*.js')"));
 const settings=fs.readFileSync(root+'/frontend/src/views/Settings.jsx','utf8');assert.ok(!settings.includes("title={t('Reset demo data')}"));assert.ok(settings.includes("window.location.href = './legacy/'"));
 console.log('PASS: pt-BR default, en alternate, restricted packs, no demo seed/reset and legacy access');
+
+assert.ok(core.includes("if (lang === 'pt-BR' && !ex.custom) return ''"));
+console.log('PASS: no unlabeled English descriptions in Portuguese view');
